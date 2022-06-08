@@ -87,11 +87,11 @@ public class SigningTest implements SignatureInterface {
 
 	public static void main(String[] args) throws KeyStoreException, NoSuchAlgorithmException, CertificateException,
 		FileNotFoundException, IOException, COSVisitorException, SignatureException, Exception {
-		File document = new File("D:\\CIBD-Docs\\certTechnician.pdf");
+		File document = new File("D:\\****-Docs\\certTechnician.pdf");
 		PDDocument pdDocument = PDDocument.load(document);
-		addSignature(pdDocument, "D:\\CIBD-Docs\\fred.pfx", "apples");
+		addSignature(pdDocument, "D:\\****-Docs\\fred.pfx", "apples");
 
-		File outputDocument = new File("D:\\CIBD-Docs\\DigitallySignedcertTechnician.pdf");
+		File outputDocument = new File("D:\\****-Docs\\DigitallySignedcertTechnician.pdf");
 		FileInputStream fis = new FileInputStream(document);
 		FileOutputStream fos = new FileOutputStream(outputDocument);
 		byte[] buffer = new byte[8 * 1024];
@@ -105,11 +105,11 @@ public class SigningTest implements SignatureInterface {
 		pdDocument.saveIncremental(fis, fos);
 		pdDocument.close();
 
-		document = new File("D:\\CIBD-Docs\\DigitallySignedcertTechnician.pdf");
+		document = new File("D:\\****-Docs\\DigitallySignedcertTechnician.pdf");
 		pdDocument = PDDocument.load(document);
-		addSignature(pdDocument, "D:\\CIBD-Docs\\sample01.pfx", "battery");
+		addSignature(pdDocument, "D:\\****-Docs\\sample01.pfx", "battery");
 
-		outputDocument = new File("D:\\CIBD-Docs\\DigitallySignedcertTechnicianAgain.pdf");
+		outputDocument = new File("D:\\****-Docs\\DigitallySignedcertTechnicianAgain.pdf");
 		fis = new FileInputStream(document);
 		fos = new FileOutputStream(outputDocument);
 		buffer = new byte[8 * 1024];
