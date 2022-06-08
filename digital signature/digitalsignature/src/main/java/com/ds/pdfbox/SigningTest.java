@@ -89,7 +89,7 @@ public class SigningTest implements SignatureInterface {
 		FileNotFoundException, IOException, COSVisitorException, SignatureException, Exception {
 		File document = new File("D:\\****-Docs\\certTechnician.pdf");
 		PDDocument pdDocument = PDDocument.load(document);
-		addSignature(pdDocument, "D:\\****-Docs\\fred.pfx", "apples");
+		addSignature(pdDocument, "D:\\****-Docs\\sample02.pfx", "apples");
 
 		File outputDocument = new File("D:\\****-Docs\\DigitallySignedcertTechnician.pdf");
 		FileInputStream fis = new FileInputStream(document);
